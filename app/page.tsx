@@ -1,8 +1,12 @@
-import Header from "@/components/header"
-import HeroSection from "@/components/hero-section"
-import CollectionShowcase from "@/components/collection-showcase"
-import ProductGrid from "@/components/product-grid"
-import Footer from "@/components/footer"
+import Header from "@/components/header";
+import HeroSection from "@/components/hero-section";
+import CollectionShowcase from "@/components/collection-showcase";
+import SummerSales from "@/components/summer-sales";
+import LigneeOr from "@/components/lignee-or";
+import Lumara from "@/components/lumara";
+import CuratedForYou from "@/components/curated-for-you";
+import ReviewsSection from "@/components/reviews-section";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -10,8 +14,12 @@ export default function Home() {
       <Header />
       <HeroSection />
       <CollectionShowcase />
-      <ProductGrid />
+      <SummerSales />
+      <LigneeOr />
+      <Lumara />
+      <CuratedForYou />
+      <ReviewsSection />
       <Footer />
     </main>
-  )
+  );
 }
