@@ -52,9 +52,9 @@ export default function HeroSection() {
       <div className="relative z-10 flex items-center justify-center h-full">
         <div className="text-center text-white px-6 max-w-4xl">
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-light tracking-[0.2em] mb-8 leading-tight">
-            KAFTAN
+            AYAHS
             <br />
-            ELEGANCE
+            KAFTAN
           </h1>
           <p className="text-lg md:text-xl font-light tracking-wider mb-12 max-w-2xl mx-auto">
             Where tradition meets contemporary elegance. Discover our curated

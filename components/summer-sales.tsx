@@ -45,7 +45,7 @@ export default function SummerSales() {
 
   return (
     <section className="py-24 bg-gradient-to-b from-rose-50 to-orange-50">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="w-full mx-auto px-8 md:px-12 lg:px-16 xl:px-20">
         <div className="text-center mb-16">
           <h2 className="font-serif text-5xl md:text-6xl font-light tracking-[0.2em] text-black mb-4">
             UP TO 50%
@@ -54,10 +54,10 @@ export default function SummerSales() {
           <div className="w-24 h-px bg-black mx-auto mt-4"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10">
           {saleProducts.map((product) => (
             <div key={product.id} className="group cursor-pointer">
-              <div className="relative overflow-hidden mb-4 aspect-[3/4] bg-white rounded-lg shadow-sm">
+              <div className="relative overflow-hidden mb-4 aspect-[4/5] bg-white rounded-lg shadow-sm">
                 <div className="absolute top-4 left-4 z-10 bg-red-500 text-white text-xs px-2 py-1 rounded">
                   SAVE {product.discount}
                 </div>
