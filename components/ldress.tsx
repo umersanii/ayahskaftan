@@ -40,21 +40,27 @@ export default function LigneeOr() {
   return (
       <section className="py-24 bg-gradient-to-b from-rose-50 to-pink-50">
 
+
       <div className="w-full mx-auto px-8 md:px-12 lg:px-16 xl:px-20">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-5xl md:text-6xl font-light tracking-[0.2em] text-black mb-4">
-            L'Dress
-          </h2>
-          <p className="text-lg text-gray-600 tracking-wider">
-            A CELEBRATION OF LINEAGE
+            <h2
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-thin tracking-[0.15em] sm:tracking-[0.2em] text-black mb-4"
+
+            style={{ fontFamily: "var(--font-heading)" }}
+            >
+            L'DRESS
+            </h2>
+          <p className="text-xs sm:text-sm text-gray-600 tracking-[0.3em] sm:tracking-[0.25em] px-4"
+            style={{ fontFamily: "var(--font-body)" }}>
+            FEMININE CHARM, REDEFINED
           </p>
           <div className="w-4 h-px bg-black mx-auto mt-2"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10">
           {products.map((product) => (
             <div key={product.id} className="group cursor-pointer">
-              <div className="relative overflow-hidden mb-6 aspect-[9/15] bg-white rounded-lg shadow-sm">
+              <div className="relative overflow-hidden mb-6 aspect-[9/15] bg-white shadow-sm">
                 <Image
                   src={product.image}
                   alt={product.name}
@@ -67,15 +73,28 @@ export default function LigneeOr() {
               </div>
 
               <div className="text-center">
-                <h3 className="font-serif text-sm tracking-[0.15em] text-black mb-2 leading-tight">
+                <h3
+                  className="text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] mb-2 leading-tight text-gray-600 px-1"
+                  style={{ fontFamily: "var(--font-secondary)" }}
+                >
                   {product.name}
                 </h3>
-                <div className="text-lg font-medium text-black">
-                  SALE PRICE {product.price}
+                <div className="text-xs sm:text-sm font-normal text-black tracking-[0.1em] sm:tracking-[0.15em] text-gray-600"
+                style={{ fontFamily: "var(--font-secondary)" } }>
+
+                  {product.price}
                 </div>
               </div>
             </div>
           ))}
+        </div>
+         <div className="text-center mt-12">
+          <Button
+            className="px-8 py-3 bg-black text-white hover:bg-gray-800 text-sm font-semibold tracking-widest transition-all duration-300 rounded-none"
+            onClick={() => (window.location.href = "/category/perlage")}
+          >
+            VIEW ALL
+          </Button>
         </div>
       </div>
     </section>

@@ -2,6 +2,15 @@
 @import "tw-animate-css";
 
 :root {
+  /* Font System Variables */
+  --font-primary: var(--font-playfair);
+  --font-secondary: var(--font-inter);
+  --font-body: var(--font-inter);
+  --font-heading: var(--font-playfair);
+  --font-display: var(--font-playfair);
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  
+  /* Color Variables */
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -119,7 +128,33 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  
+  /* Typography Classes */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+  
+  .font-primary {
+    font-family: var(--font-primary);
+  }
+  
+  .font-secondary {
+    font-family: var(--font-secondary);
+  }
+  
+  .font-display {
+    font-family: var(--font-display);
+  }
+  
+  .font-body {
+    font-family: var(--font-body);
+  }
+  
+  .font-heading {
+    font-family: var(--font-heading);
   }
 }
 

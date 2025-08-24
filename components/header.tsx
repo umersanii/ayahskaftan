@@ -7,21 +7,37 @@ import { Button } from "@/components/ui/button";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const currentScrollY = window.scrollY;
+      
+      // Set scrolled state
+      setIsScrolled(currentScrollY > 50);
+      
+      // Handle navbar visibility based on scroll direction
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down & past threshold
+        setIsVisible(false);
+      } else {
+        // Scrolling up or at top
+        setIsVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   const navigationItems = [
-    "KAFTAN",
-    "LEBSA",
-    "JELLABA",
-    "EXCLUSIVE COLLECTION",
+    "AYAHS KAFTAN",
+    "JALABAYTI", 
+    "PERLAGE",
+    "L'DERSS",
   ];
 
   return (
@@ -36,6 +52,8 @@ export default function Header() {
           isScrolled
             ? "bg-white/95 backdrop-blur-md shadow-sm"
             : "bg-transparent"
+        } ${
+          isVisible ? "translate-y-0" : "-translate-y-[calc(100%+2rem)]"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 py-4">
@@ -50,8 +68,8 @@ export default function Header() {
             </Button>
 
             <div className="flex-1 flex justify-center">
-              <h1 className="font-serif text-2xl md:text-3xl font-light tracking-[0.3em] text-black">
-                KAFTAN ELEGANCE
+              <h1 className="font-serif text-lg sm:text-xl md:text-2xl lg:text-3xl font-light tracking-[0.2em] sm:tracking-[0.25em] md:tracking-[0.3em] text-black">
+                AYAHS KAFTAN
               </h1>
             </div>
 

@@ -1,22 +1,10 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Playfair_Display, Inter } from "next/font/google"
+import { fontConfig } from "@/lib/fonts"
 import "./globals.css"
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-playfair",
-})
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-})
-
 export const metadata: Metadata = {
-  title: "KAFTAN ELEGANCE",
+  title: "AYAHS KAFTAN",
   description: "Elegant Traditional Clothing & Kaftans",
   generator: "v0.app",
 }
@@ -26,9 +14,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const primaryFont = fontConfig.primary;
+  const secondaryFont = fontConfig.secondary;
+
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable} antialiased`}>
-      <body className="font-sans">{children}</body>
+    <html lang="en" className={`${primaryFont.variable} ${secondaryFont.variable} antialiased`}>
+      <body className="font-body">{children}</body>
     </html>
   )
 }
