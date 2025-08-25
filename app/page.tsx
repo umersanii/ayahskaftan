@@ -4,7 +4,7 @@ import SummerSales from "@/components/summer-sales";
 import Ldress from "@/components/ldress";
 import Perlage from "@/components/perlage";
 import AyahsKaftan from "@/components/ayahskaftan";
-import Jalabayti from "@/components/Jalabayti";
+import Jalabayti from "@/components/jalabayti";
 import CuratedForYou from "@/components/curated-for-you";
 import Footer from "@/components/footer";
 import AboutUs from "@/components/about-us";
