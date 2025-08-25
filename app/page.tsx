@@ -12,6 +12,7 @@ import TrustBadges from "@/components/trust-badges";
 import Footer from "@/components/footer";
 import AboutUs from "@/components/about-us";
 
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
@@ -24,7 +25,6 @@ export default function Home() {
       <Ldress />
       <Perlage />
       <Jalabayti />
-      
       <AboutUs />
       <Footer />
     </main>
