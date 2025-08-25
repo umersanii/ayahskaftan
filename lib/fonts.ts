@@ -1,4 +1,4 @@
-import { Playfair_Display, Inter, Lora, Cormorant_Garamond, Crimson_Text, Jost } from "next/font/google";
+import { Playfair_Display, Inter, Jost } from "next/font/google";
 
 // Current Active Fonts
 export const playfair = Playfair_Display({

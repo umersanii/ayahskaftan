@@ -74,7 +74,7 @@ export default function LoginModal() {
                   </span>
                 ) : (
                   <span className="text-sm">
-                    Don't have an account?{" "}
+                    Don&apos;t have an account?{" "}
                     <button className="text-blue-600 hover:underline" onClick={() => setIsRegister(true)}>
                       Register now
                     </button>

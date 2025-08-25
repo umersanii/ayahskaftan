@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { ShoppingBag, Menu, Search, X, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,13 +34,6 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  const navigationItems = [
-    "AYAHS KAFTAN",
-    "JALABAYTI", 
-    "PERLAGE",
-    "L'DERSS",
-  ];
-
   return (
     <>
       {/* Announcement Bar */}
@@ -68,11 +62,11 @@ export default function Header() {
             </Button>
 
             <div className="flex-1 flex justify-center">
-              <a href="/" className="hover:opacity-80 transition-opacity">
+              <Link href="/" className="hover:opacity-80 transition-opacity">
                 <h1 className="font-serif text-lg sm:text-xl md:text-2xl lg:text-3xl font-light tracking-[0.2em] sm:tracking-[0.25em] md:tracking-[0.3em] text-white">
                   AYAHS KAFTAN
                 </h1>
-              </a>
+              </Link>
             </div>
 
             <div className="flex items-center space-x-3">
@@ -128,36 +122,36 @@ export default function Header() {
               </div>
             </div>
             <nav className="p-6 space-y-6">
-              <a
+              <Link
                 href="/"
                 className="block font-serif text-sm text-white tracking-wider hover:opacity-70 transition-opacity"
               >
                 HOME
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/category/ayahs-kaftan"
                 className="block font-serif text-sm text-white tracking-wider hover:opacity-70 transition-opacity"
               >
                 AYAHS KAFTAN
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/category/jalabayti"
                 className="block font-serif text-sm text-white tracking-wider hover:opacity-70 transition-opacity"
               >
                 JALABAYTI
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/category/perlage"
                 className="block font-serif text-sm text-white tracking-wider hover:opacity-70 transition-opacity"
               >
                 PERLAGE
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/category/lderss"
                 className="block font-serif text-sm text-white tracking-wider hover:opacity-70 transition-opacity"
               >
-                L'DERSS
-              </a>
+                L&apos;DERSS
+              </Link>
               <div className="pt-4 border-t border-gray-700">
                 <a
                   href="#about"

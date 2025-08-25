@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Heart, Eye, ShoppingBag } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 interface Product {
   id: number
@@ -27,10 +28,11 @@ export default function ProductCard({ product }: ProductCardProps) {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="aspect-[3/4] relative overflow-hidden">
-        <img
+        <Image
           src={product.image || "/placeholder.svg"}
           alt={product.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-300"
         />
 
         {/* Overlay buttons */}

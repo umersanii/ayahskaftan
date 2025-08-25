@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 const collections = [
   {
@@ -89,14 +90,15 @@ export default function CollectionShowcase() {
           className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-1"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          {collections.map((collection, index) => (
+          {collections.map((collection) => (
             <div key={collection.id} className="flex-none w-1/2 snap-start relative group cursor-pointer">
               <div className="relative h-[600px] overflow-hidden mx-1">
                 {/* Background Image */}
-                <img
+                <Image
                   src={collection.image || "/placeholder.svg"}
                   alt={collection.title}
-                  className="w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110 group-hover:brightness-110"
+                  fill
+                  className="object-cover transition-all duration-500 ease-out group-hover:scale-110 group-hover:brightness-110"
                 />
 
                 {/* Gradient Overlay */}

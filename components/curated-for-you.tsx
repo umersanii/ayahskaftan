@@ -176,7 +176,7 @@ export default function CuratedForYou() {
 
           {/* Side Grid */}
           <div className="lg:col-span-5 flex flex-col gap-2">
-            {sideProducts.map((product, index) => (
+            {sideProducts.map((product) => (
               <Link
                 key={product.id}
                 href={`/product/${product.id}`}

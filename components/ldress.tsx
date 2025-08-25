@@ -48,7 +48,7 @@ export default function LigneeOr() {
 
             style={{ fontFamily: "var(--font-heading)" }}
             >
-            L'DRESS
+            L&apos;DRESS
             </h2>
           <p className="text-xs sm:text-sm text-gray-600 tracking-[0.3em] sm:tracking-[0.25em] px-4"
             style={{ fontFamily: "var(--font-body)" }}>

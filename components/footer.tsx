@@ -85,7 +85,7 @@ export default function Footer() {
                   className="text-gray-400 hover:text-white transition-colors text-sm tracking-wider"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
-                  L'Derss
+                  L&apos;Derss
                 </a>
               </li>
             </ul>
