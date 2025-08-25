@@ -78,17 +78,19 @@ export default function AboutUs() {
         {/* Brand Values */}
         <div className="mt-24 pt-16 border-t border-gray-200">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
-            
+
             {/* Heritage */}
             <div className="text-center space-y-4">
               <h3 
-                className="text-lg font-medium tracking-[0.25em] text-black"
+                className="text-lg font-semibold tracking-[0.25em] text-black mb-0.5"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 HERITAGE
               </h3>
+          <div className="w-6 h-px bg-black mx-auto mt-2"></div>
+
               <p 
-                className="text-gray-600 text-sm leading-relaxed tracking-wide max-w-xs mx-auto"
+                className="text-gray-500 text-sm leading-relaxed tracking-wide max-w-xs mx-auto"
                 style={{ fontFamily: "var(--font-body)" }}
               >
                 Rooted in traditional Moroccan craftsmanship, 
@@ -99,13 +101,15 @@ export default function AboutUs() {
             {/* Quality */}
             <div className="text-center space-y-4">
               <h3 
-                className="text-lg font-medium tracking-[0.25em] text-black"
+                className="text-lg font-semibold tracking-[0.25em] text-black mb-0.5"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 QUALITY
               </h3>
+          <div className="w-6 h-px bg-black mx-auto mt-2"></div>
+
               <p 
-                className="text-gray-600 text-sm leading-relaxed tracking-wide max-w-xs mx-auto"
+                className="text-gray-500 text-sm leading-relaxed tracking-wide max-w-xs mx-auto"
                 style={{ fontFamily: "var(--font-body)" }}
               >
                 Meticulous attention to detail in every piece, 
@@ -116,13 +120,15 @@ export default function AboutUs() {
             {/* Elegance */}
             <div className="text-center space-y-4">
               <h3 
-                className="text-lg font-medium tracking-[0.25em] text-black"
+                className="text-lg font-semibold tracking-[0.25em] text-black mb-0.5"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 ELEGANCE
               </h3>
+          <div className="w-6 h-px bg-black mx-auto mt-2"></div>
+
               <p 
-                className="text-gray-600 text-sm leading-relaxed tracking-wide max-w-xs mx-auto"
+                className="text-gray-500 text-sm leading-relaxed tracking-wide max-w-xs mx-auto"
                 style={{ fontFamily: "var(--font-body)" }}
               >
                 Modern sophistication meets timeless modesty, 

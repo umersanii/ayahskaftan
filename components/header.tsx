@@ -50,8 +50,8 @@ export default function Header() {
       <header
         className={`fixed top-8 w-full z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-white/95 backdrop-blur-md shadow-sm"
-            : "bg-transparent"
+            ? "bg-black/95 backdrop-blur-md shadow-sm"
+            : "bg-black/90"
         } ${
           isVisible ? "translate-y-0" : "-translate-y-[calc(100%+2rem)]"
         }`}
@@ -62,14 +62,14 @@ export default function Header() {
               variant="ghost"
               size="sm"
               onClick={() => setIsMenuOpen(true)}
-              className="hover:bg-transparent"
+              className="hover:bg-white/10"
             >
-              <Menu className="h-5 w-5 text-black" />
+              <Menu className="h-5 w-5 text-white" />
             </Button>
 
             <div className="flex-1 flex justify-center">
               <a href="/" className="hover:opacity-80 transition-opacity">
-                <h1 className="font-serif text-lg sm:text-xl md:text-2xl lg:text-3xl font-light tracking-[0.2em] sm:tracking-[0.25em] md:tracking-[0.3em] text-black">
+                <h1 className="font-serif text-lg sm:text-xl md:text-2xl lg:text-3xl font-light tracking-[0.2em] sm:tracking-[0.25em] md:tracking-[0.3em] text-white">
                   AYAHS KAFTAN
                 </h1>
               </a>
@@ -79,24 +79,24 @@ export default function Header() {
               <Button
                 variant="ghost"
                 size="sm"
-                className="hover:bg-transparent"
+                className="hover:bg-white/10"
               >
-                <Search className="h-5 w-5 text-black" />
+                <Search className="h-5 w-5 text-white" />
               </Button>
               <Button
                 variant="ghost"
                 size="sm"
-                className="hover:bg-transparent"
+                className="hover:bg-white/10"
               >
-                <User className="h-5 w-5 text-black" />
+                <User className="h-5 w-5 text-white" />
               </Button>
               <Button
                 variant="ghost"
                 size="sm"
-                className="relative hover:bg-transparent"
+                className="relative hover:bg-white/10"
               >
-                <ShoppingBag className="h-5 w-5 text-black" />
-                <span className="absolute -top-1 -right-1 bg-black text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
+                <ShoppingBag className="h-5 w-5 text-white" />
+                <span className="absolute -top-1 -right-1 bg-white text-black text-xs rounded-full h-4 w-4 flex items-center justify-center">
                   0
                 </span>
               </Button>
@@ -111,62 +111,63 @@ export default function Header() {
             className="fixed inset-0 bg-black bg-opacity-50"
             onClick={() => setIsMenuOpen(false)}
           />
-          <div className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl">
-            <div className="p-6 border-b border-gray-100">
+          <div className="fixed left-0 top-0 h-full w-80 bg-black shadow-xl">
+            <div className="p-6 border-b border-gray-700">
               <div className="flex items-center justify-between">
-                <h2 className="font-serif text-lg text-black tracking-wider">
+                <h2 className="font-serif text-lg text-white tracking-wider">
                   MENU
                 </h2>
                 <Button
                   variant="ghost"
                   size="sm"
                   onClick={() => setIsMenuOpen(false)}
+                  className="hover:bg-white/10"
                 >
-                  <X className="h-5 w-5 text-black" />
+                  <X className="h-5 w-5 text-white" />
                 </Button>
               </div>
             </div>
             <nav className="p-6 space-y-6">
               <a
                 href="/"
-                className="block font-serif text-sm text-black tracking-wider hover:opacity-70 transition-opacity"
+                className="block font-serif text-sm text-white tracking-wider hover:opacity-70 transition-opacity"
               >
                 HOME
               </a>
               <a
                 href="/category/ayahs-kaftan"
-                className="block font-serif text-sm text-black tracking-wider hover:opacity-70 transition-opacity"
+                className="block font-serif text-sm text-white tracking-wider hover:opacity-70 transition-opacity"
               >
                 AYAHS KAFTAN
               </a>
               <a
                 href="/category/jalabayti"
-                className="block font-serif text-sm text-black tracking-wider hover:opacity-70 transition-opacity"
+                className="block font-serif text-sm text-white tracking-wider hover:opacity-70 transition-opacity"
               >
                 JALABAYTI
               </a>
               <a
                 href="/category/perlage"
-                className="block font-serif text-sm text-black tracking-wider hover:opacity-70 transition-opacity"
+                className="block font-serif text-sm text-white tracking-wider hover:opacity-70 transition-opacity"
               >
                 PERLAGE
               </a>
               <a
                 href="/category/lderss"
-                className="block font-serif text-sm text-black tracking-wider hover:opacity-70 transition-opacity"
+                className="block font-serif text-sm text-white tracking-wider hover:opacity-70 transition-opacity"
               >
                 L'DERSS
               </a>
-              <div className="pt-4 border-t border-gray-100">
+              <div className="pt-4 border-t border-gray-700">
                 <a
                   href="#about"
-                  className="block font-serif text-sm text-gray-600 tracking-wider hover:opacity-70 transition-opacity"
+                  className="block font-serif text-sm text-gray-300 tracking-wider hover:opacity-70 transition-opacity"
                 >
                   ABOUT US
                 </a>
                 <a
                   href="#contact"
-                  className="block font-serif text-sm text-gray-600 tracking-wider hover:opacity-70 transition-opacity mt-4"
+                  className="block font-serif text-sm text-gray-300 tracking-wider hover:opacity-70 transition-opacity mt-4"
                 >
                   CONTACT
                 </a>
