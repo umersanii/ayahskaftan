@@ -68,9 +68,11 @@ export default function Header() {
             </Button>
 
             <div className="flex-1 flex justify-center">
-              <h1 className="font-serif text-lg sm:text-xl md:text-2xl lg:text-3xl font-light tracking-[0.2em] sm:tracking-[0.25em] md:tracking-[0.3em] text-black">
-                AYAHS KAFTAN
-              </h1>
+              <a href="/" className="hover:opacity-80 transition-opacity">
+                <h1 className="font-serif text-lg sm:text-xl md:text-2xl lg:text-3xl font-light tracking-[0.2em] sm:tracking-[0.25em] md:tracking-[0.3em] text-black">
+                  AYAHS KAFTAN
+                </h1>
+              </a>
             </div>
 
             <div className="flex items-center space-x-3">
@@ -126,29 +128,44 @@ export default function Header() {
             </div>
             <nav className="p-6 space-y-6">
               <a
-                href="#"
+                href="/"
                 className="block font-serif text-sm text-black tracking-wider hover:opacity-70 transition-opacity"
               >
                 HOME
               </a>
-              {navigationItems.map((item) => (
-                <a
-                  key={item}
-                  href="#"
-                  className="block font-serif text-sm text-black tracking-wider hover:opacity-70 transition-opacity"
-                >
-                  {item}
-                </a>
-              ))}
+              <a
+                href="/category/ayahs-kaftan"
+                className="block font-serif text-sm text-black tracking-wider hover:opacity-70 transition-opacity"
+              >
+                AYAHS KAFTAN
+              </a>
+              <a
+                href="/category/jalabayti"
+                className="block font-serif text-sm text-black tracking-wider hover:opacity-70 transition-opacity"
+              >
+                JALABAYTI
+              </a>
+              <a
+                href="/category/perlage"
+                className="block font-serif text-sm text-black tracking-wider hover:opacity-70 transition-opacity"
+              >
+                PERLAGE
+              </a>
+              <a
+                href="/category/lderss"
+                className="block font-serif text-sm text-black tracking-wider hover:opacity-70 transition-opacity"
+              >
+                L'DERSS
+              </a>
               <div className="pt-4 border-t border-gray-100">
                 <a
-                  href="#"
+                  href="#about"
                   className="block font-serif text-sm text-gray-600 tracking-wider hover:opacity-70 transition-opacity"
                 >
                   ABOUT US
                 </a>
                 <a
-                  href="#"
+                  href="#contact"
                   className="block font-serif text-sm text-gray-600 tracking-wider hover:opacity-70 transition-opacity mt-4"
                 >
                   CONTACT

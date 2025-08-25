@@ -88,7 +88,7 @@ export default function LigneeOr() {
          <div className="text-center mt-12">
           <Button
             className="px-8 py-3 bg-black text-white hover:bg-gray-800 text-sm font-semibold tracking-widest transition-all duration-300 rounded-none"
-            onClick={() => (window.location.href = "/category/perlage")}
+            onClick={() => (window.location.href = "/category/ayahs-kaftan")}
           >
             VIEW ALL
           </Button>
