@@ -114,13 +114,6 @@ export default function Footer() {
               </a>
               <div className="pt-4 space-y-3">
                 <a 
-                  href="#" 
-                  className="block text-gray-400 hover:text-white transition-colors text-sm tracking-wider"
-                  style={{ fontFamily: "var(--font-body)" }}
-                >
-                  Privacy Policy
-                </a>
-                <a 
                   href="/terms" 
                   className="block text-gray-400 hover:text-white transition-colors text-sm tracking-wider"
                   style={{ fontFamily: "var(--font-body)" }}
