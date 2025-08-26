@@ -76,25 +76,25 @@ export default function CuratedForYou() {
     <section className="py-12 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50">
       <div className="max-w-[1800px] mx-auto px-3 lg:px-4 xl:px-6">
         {/* Section Header */}
-        <div className="text-center mb-12 lg:mb-20">
+  <div className="text-center mb-12 lg:mb-20 bg-black py-8 rounded-xl">
           <div className="flex items-center justify-center mb-4 lg:mb-6">
-            <div className="w-6 lg:w-8 h-px bg-gradient-to-r from-transparent to-black"></div>
-            <Crown className="h-5 lg:h-6 w-5 lg:w-6 mx-3 lg:mx-4 text-black" />
-            <div className="w-6 lg:w-8 h-px bg-gradient-to-l from-transparent to-black"></div>
+            <div className="w-6 lg:w-8 h-px bg-gradient-to-r from-transparent to-white/60"></div>
+            <Crown className="h-5 lg:h-6 w-5 lg:w-6 mx-3 lg:mx-4 text-white" />
+            <div className="w-6 lg:w-8 h-px bg-gradient-to-l from-transparent to-white/60"></div>
           </div>
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light tracking-[0.2em] lg:tracking-[0.3em] text-black mb-4 lg:mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light tracking-[0.2em] lg:tracking-[0.3em] text-white mb-4 lg:mb-6"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             CURATED SELECTION
           </h2>
           <p
-            className="text-xs lg:text-sm text-gray-600 tracking-[0.2em] lg:tracking-[0.25em] max-w-2xl mx-auto mb-6 lg:mb-8"
+            className="text-xs lg:text-sm text-gray-200 tracking-[0.2em] lg:tracking-[0.25em] max-w-2xl mx-auto mb-6 lg:mb-8"
             style={{ fontFamily: "var(--font-body)" }}
           >
             HANDPICKED BY OUR DESIGNERS • EACH PIECE TELLS A STORY
           </p>
-          <div className="w-16 lg:w-20 h-px bg-black mx-auto"></div>
+          <div className="w-16 lg:w-20 h-px bg-white/60 mx-auto"></div>
         </div>
 
         {/* Editorial Layout */}
@@ -326,7 +326,7 @@ export default function CuratedForYou() {
           <Button
             className="px-8 lg:px-12 py-3 lg:py-4 bg-black text-white hover:bg-gray-900 text-xs lg:text-sm font-medium tracking-[0.2em] lg:tracking-[0.25em] transition-all duration-300 rounded-none"
             style={{ fontFamily: "var(--font-body)" }}
-            onClick={() => (window.location.href = "/category/jalabayti")}
+            onClick={() => (window.location.href = "/category/ayahs-kaftan")}
           >
             EXPLORE ALL COLLECTIONS
           </Button>

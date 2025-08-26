@@ -4,18 +4,21 @@ import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-gray-200 via-gray-50 to-white">
+    <section className="relative min-h-screen w-full overflow-hidden white">
       {/* Desktop Layout */}
       <div className="hidden md:flex h-screen">
         {/* Left Content Area - 55% */}
         <div className="w-[55%] flex items-center justify-end px-8 pr-4 lg:px-16 lg:pr-8">
           <div className="text-left text-black max-w-2xl">
-            <h1 className="font-serif text-4xl lg:text-6xl xl:text-7xl font-light tracking-[0.2em] mb-8 leading-tight">
-              AYAHS
-              <br />
-              KAFTAN
+            <h1 
+              className="font-serif text-4xl lg:text-6xl xl:text-6xl font-medium tracking-[0.2em] mb-8 leading-tight"
+              style={{ fontFamily: "var(--font-heading)" }}
+            >
+              AYAHS KAFTAN
             </h1>
-            <p className="text-lg lg:text-xl font-light tracking-wider mb-12 text-black">
+            <p className="text-lg lg:text-xl font-extralight tracking-wider mb-12 text-gray-600"
+              style={{ fontFamily: "var(--font-body)" }}
+            >
               Timeless tradition reimagined for the modern woman. Explore our exclusive collection of handcrafted kaftans, designed to bring elegance, comfort, and sophistication to every occasion.
             </p>
             <Button

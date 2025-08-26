@@ -72,22 +72,22 @@ export default function SummerSales() {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-red-50 to-orange-50">
+  <section className="py-24 bg-gradient-to-b white">
       <div className="w-full mx-auto px-8 md:px-12 lg:px-16 xl:px-20">
-        <div className="text-center mb-16">
+  <div className="text-center mb-16 bg-black py-8 rounded-xl">
             <h2
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-thin tracking-[0.15em] sm:tracking-[0.2em] text-black mb-4"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-thin tracking-[0.15em] sm:tracking-[0.2em] text-white mb-4"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               UP TO 50% OFF
             </h2>
           <p 
-            className="text-xs sm:text-sm text-gray-600 tracking-[0.3em] sm:tracking-[0.25em] px-4"
+            className="text-xs sm:text-sm text-gray-200 tracking-[0.3em] sm:tracking-[0.25em] px-4"
             style={{ fontFamily: "var(--font-body)" }}
           >
             SUMMER SALE
           </p>
-          <div className="w-4 h-px bg-black mx-auto mt-2"></div>
+          <div className="w-4 h-px bg-white/60 mx-auto mt-2"></div>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10">
