@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Crown, Sparkles, Star } from "lucide-react";
+import { Sparkles, Star } from "lucide-react";
 
 export default function CuratedForYou() {
   const curatedProducts = [
