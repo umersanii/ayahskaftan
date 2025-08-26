@@ -63,11 +63,12 @@ export interface ProductProps {
 }
 
 interface PageProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 export default function ProductPage({ params }: PageProps) {
-  const product = productData[Number(params.id) as keyof typeof productData];
+  const resolvedParams = use(params);
+  const product = productData[Number(resolvedParams.id) as keyof typeof productData];
   const [selectedImage, setSelectedImage] = useState(0);
   const [selectedSize, setSelectedSize] = useState("");
   const [selectedColor, setSelectedColor] = useState("");
