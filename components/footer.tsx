@@ -121,7 +121,7 @@ export default function Footer() {
                   Privacy Policy
                 </a>
                 <a 
-                  href="#" 
+                  href="/terms" 
                   className="block text-gray-400 hover:text-white transition-colors text-sm tracking-wider"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
