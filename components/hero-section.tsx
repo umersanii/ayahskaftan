@@ -40,10 +40,23 @@ export default function HeroSection() {
                 muted
                 loop
                 playsInline
+                preload="metadata"
+                webkit-playsinline="true"
                 className="absolute inset-0 w-full h-full object-contain rounded-xl"
+                style={{
+                  WebkitTransform: "translateZ(0)",
+                  transform: "translateZ(0)",
+                }}
+                onLoadStart={() => {
+                  // Safari-specific video loading optimization
+                  const video = document.querySelector('video');
+                  if (video && /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent)) {
+                    video.load();
+                  }
+                }}
               >
                 <source src="/hero-video.mp4" type="video/mp4" />
-                {/* Fallback content when video is not available */}
+                {/* Enhanced fallback for Safari */}
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-200 to-orange-200 flex items-center justify-center rounded-xl">
                   <span className="text-gray-600 text-center text-sm">Video Loading...</span>
                 </div>
@@ -61,7 +74,20 @@ export default function HeroSection() {
           muted
           loop
           playsInline
+          preload="metadata"
+          webkit-playsinline="true"
           className="absolute inset-0 w-full h-full object-cover"
+          style={{
+            WebkitTransform: "translateZ(0)",
+            transform: "translateZ(0)",
+          }}
+          onLoadStart={() => {
+            // Safari-specific video loading optimization
+            const video = document.querySelector('video');
+            if (video && /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent)) {
+              video.load();
+            }
+          }}
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>

@@ -1,20 +1,24 @@
 import { Playfair_Display, Inter } from "next/font/google";
 import localFont from "next/font/local";
 
-// Current Active Fonts
+// Current Active Fonts - Safari Optimized
 export const playfair = Playfair_Display({
     subsets: ["latin"],
     display: "swap",
     variable: "--font-playfair",
+    fallback: ["serif", "Times New Roman", "Times"],
+    preload: true,
 });
 
 export const inter = Inter({
     subsets: ["latin"],
     display: "swap",
     variable: "--font-inter",
+    fallback: ["system-ui", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+    preload: true,
 });
 
-// Local Jost Font Configuration
+// Local Jost Font Configuration - Safari Optimized
 export const jost = localFont({
     src: [
         {
@@ -91,6 +95,8 @@ export const jost = localFont({
     ],
     variable: "--font-jost",
     display: "swap",
+    fallback: ["system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+    preload: true,
 });
 
 // Alternative Font Options (uncomment to use)

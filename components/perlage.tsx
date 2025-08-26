@@ -43,12 +43,14 @@ export default function Lumara() {
   <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-4">
             <div className="flex-1 h-px bg-gray-300"></div>
-            <h2
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-[0.15em] sm:tracking-[0.2em] text-black mx-6 sm:mx-8 md:mx-12"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              PERLAGE
-            </h2>
+            <div className="mx-6 sm:mx-8 md:mx-12">
+              <img 
+                src="/perlage-logo.png" 
+                alt="Perlage" 
+                className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto object-contain"
+                style={{ maxWidth: "200px" }}
+              />
+            </div>
             <div className="flex-1 h-px bg-gray-300"></div>
           </div>
           <p className="text-xs sm:text-sm text-gray-600 tracking-[0.3em] sm:tracking-[0.25em] px-4"

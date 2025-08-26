@@ -130,11 +130,18 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
+    /* Safari optimizations */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
   
   /* Typography Classes */
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
+    /* Safari text rendering optimization */
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
   
   .font-primary {
@@ -156,6 +163,26 @@
   .font-heading {
     font-family: var(--font-heading);
   }
+  
+  /* Safari-specific optimizations */
+  video {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  /* Smooth scrolling for Safari */
+  html {
+    scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
+  }
+  
+  /* Safari flexbox fix */
+  .safari-flex-fix {
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+  }
 }
 
 /* Custom styles for Kaftan Elegance aesthetic */
@@ -170,4 +197,40 @@
 .product-hover:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Safari-specific optimizations */
+.safari-browser {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.safari-browser video {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.safari-browser .video-container {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* Safari button optimizations */
+.safari-browser button {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+/* Safari scroll optimization */
+.safari-browser {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Safari image rendering */
+.safari-browser img {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
