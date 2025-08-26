@@ -41,17 +41,33 @@ const productData = {
   }
 };
 
-interface ProductPageProps {
-  params: Promise<{
-    id: string;
-  }>;
+
+export interface ProductProps {
+  id: number;
+  name: string;
+  price: string;
+  originalPrice?: string;
+  category: string;
+  sku: string;
+  description: string;
+  details: string;
+  fabric: string;
+  care: string;
+  sizing: string;
+  delivery: string;
+  images: string[];
+  sizes: string[];
+  colors: string[];
+  inStock: boolean;
+  features: string[];
 }
 
-export default function ProductPage({ params }: ProductPageProps) {
-  const resolvedParams = use(params);
-  const productId = parseInt(resolvedParams.id);
-  const product = productData[productId as keyof typeof productData];
-  
+interface PageProps {
+  params: { id: string };
+}
+
+export default function ProductPage({ params }: PageProps) {
+  const product = productData[Number(params.id) as keyof typeof productData];
   const [selectedImage, setSelectedImage] = useState(0);
   const [selectedSize, setSelectedSize] = useState("");
   const [selectedColor, setSelectedColor] = useState("");

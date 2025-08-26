@@ -160,28 +160,50 @@ export default function CategoryPage({ params }: CategoryPageProps) {
     <>
       <Header />
       <div className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-to-b from-gray-50 to-white">
-          <div className="max-w-6xl mx-auto px-6 text-center">
-            <h1 
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-[0.2em] text-black mb-6"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            {getCategoryTitle(categorySlug)}
-          </h1>
-          <p 
-            className="text-sm sm:text-base text-gray-600 tracking-[0.25em] mb-8 max-w-2xl mx-auto"
-            style={{ fontFamily: "var(--font-body)" }}
-          >
-            {getCategorySubtitle(categorySlug)}
-          </p>
-          <div className="w-16 h-px bg-black mx-auto"></div>
-        </div>
-      </section>
+        {/* Breadcrumb */}
+        <section className="pt-32 pb-8">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12">
+            <div className="flex items-center space-x-2 text-sm text-gray-600 tracking-wider">
+              <span 
+                className="hover:text-black cursor-pointer transition-colors"
+                style={{ fontFamily: "var(--font-body)" }}
+                onClick={() => window.history.back()}
+              >
+                HOME
+              </span>
+              <span>/</span>
+              <span 
+                className="text-black"
+                style={{ fontFamily: "var(--font-body)" }}
+              >
+                {getCategoryTitle(categorySlug)}
+              </span>
+            </div>
+          </div>
+        </section>
 
-      {/* Products Grid */}
-      <section className="py-16">
-        <div className="max-w-full mx-auto px-6 lg:px-12 xl:px-16">
+        {/* Hero Section */}
+        <section className="pb-10">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12">
+            <div className="space-y-6">
+              <h1 
+                className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-[0.2em] text-black leading-tight"
+                style={{ fontFamily: "var(--font-heading)" }}
+              >
+                {getCategoryTitle(categorySlug)}
+              </h1>
+              <p 
+                className="text-sm text-gray-600 tracking-[0.25em] max-w-2xl"
+                style={{ fontFamily: "var(--font-body)" }}
+              >
+                {getCategorySubtitle(categorySlug)}
+              </p>
+              <div className="w-16 h-px bg-black"></div>
+            </div>
+          </div>
+        </section>      {/* Products Grid */}
+      <section className="pb-20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           {/* Results Info */}
           <div className="flex justify-between items-center mb-12">
             <p 
@@ -236,10 +258,8 @@ export default function CategoryPage({ params }: CategoryPageProps) {
                 Page {currentPage} of {totalPages}
               </p>
             </div>
-          </div>
-
-          {/* Product Grid */}
-          <div className={`grid gap-8 lg:gap-12 xl:gap-16 ${
+          </div>          {/* Product Grid */}
+          <div className={`grid gap-6 lg:gap-8 xl:gap-10 ${
             gridCols === 2 
               ? 'grid-cols-1 sm:grid-cols-2' 
               : gridCols === 3 
@@ -252,7 +272,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
                 href={`/product/${product.id}`}
                 className="group cursor-pointer"
               >
-                <div className="relative overflow-hidden mb-8 aspect-[3/4] bg-white shadow-lg">
+                <div className="relative overflow-hidden mb-4 aspect-[3/4] bg-white shadow-sm">
                   <Image
                     src={product.image}
                     alt={product.name}
@@ -260,28 +280,18 @@ export default function CategoryPage({ params }: CategoryPageProps) {
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
-                  
-                  {/* Quick View Button */}
-                  <div className="absolute bottom-6 left-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
-                    <Button 
-                      className="w-full bg-white/95 backdrop-blur-sm text-black hover:bg-white text-sm font-medium tracking-[0.2em] py-4 rounded-none border border-gray-200 shadow-lg"
-                      style={{ fontFamily: "var(--font-body)" }}
-                    >
-                      VIEW DETAILS
-                    </Button>
-                  </div>
                 </div>
 
-                <div className="text-center space-y-4">
+                <div className="text-center space-y-3">
                   <h3
-                  className="text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] mb-2 leading-tight text-gray-600 px-1"
-                  style={{ fontFamily: "var(--font-secondary)" }}
+                    className="text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] leading-tight text-gray-600 px-1"
+                    style={{ fontFamily: "var(--font-body)" }}
                   >
                     {product.name}
                   </h3>
                   <p 
-                    className="text-xs sm:text-sm font-normal text-black tracking-[0.1em] sm:tracking-[0.15em] text-gray-600"
-                    style={{ fontFamily: "var(--font-secondary)" }}
+                    className="text-xs sm:text-sm font-medium text-black tracking-[0.1em] sm:tracking-[0.15em]"
+                    style={{ fontFamily: "var(--font-body)" }}
                   >
                     {product.price}
                   </p>
@@ -344,9 +354,8 @@ export default function CategoryPage({ params }: CategoryPageProps) {
           </div>
         </div>
       </section>
-    </div>
-    <Footer />
+      </div>
+      <Footer />
     </>
   );
-  
 }

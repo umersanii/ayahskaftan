@@ -73,7 +73,7 @@ export default function SummerSales() {
   ];
 
   return (
-  <section className="py-12 lg:py-12 bg-gradient-to-b from-gray-200 to-gray-100">
+  <section className="py-12 lg:py-12 bg-gradient-to-b from-gray-200 to-white">
       <div className="w-full mx-auto px-8 md:px-12 lg:px-16 xl:px-20">
         
         <div className="text-center mb-16">

@@ -65,7 +65,7 @@ export default function CollectionsShowcase() {
         <div className="hidden lg:grid grid-cols-4 gap-6 md:gap-8 lg:gap-10">
           {collections.map((col) => (
             <Link key={col.title} href={col.link} className="group cursor-pointer">
-              <div className="relative overflow-hidden mb-6 aspect-[9/15] bg-white shadow-sm rounded-xl">
+              <div className="relative overflow-hidden mb-6 aspect-[9/15] bg-white shadow-sm">
                 <Image
                   src={col.image}
                   alt={col.title}
@@ -100,7 +100,7 @@ export default function CollectionsShowcase() {
           >
             {collections.map((col) => (
               <Link key={col.title} href={col.link} className="min-w-[70vw] max-w-[80vw] sm:min-w-[320px] sm:max-w-[340px] block">
-                <div className="relative overflow-hidden aspect-[9/15] bg-white shadow-sm rounded-xl">
+                <div className="relative overflow-hidden aspect-[9/15] bg-white shadow-sm">
                   <Image
                     src={col.image}
                     alt={col.title}
