@@ -40,17 +40,20 @@ export default function LigneeOr() {
 
       <div className="w-full mx-auto px-8 md:px-12 lg:px-16 xl:px-20">
   <div className="text-center mb-16">
+          <div className="flex items-center justify-center mb-4">
+            <div className="flex-1 h-px bg-gray-300"></div>
             <h2
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-thin tracking-[0.15em] sm:tracking-[0.2em] text-black mb-4"
-              style={{ fontFamily: "Great Vibes Regular" }}
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-[0.15em] sm:tracking-[0.2em] text-black mx-6 sm:mx-8 md:mx-12"
+              style={{ fontFamily: "var(--font-heading)" }}
             >
               JALABAYTI
             </h2>
+            <div className="flex-1 h-px bg-gray-300"></div>
+          </div>
           <p className="text-xs sm:text-sm text-gray-600 tracking-[0.3em] sm:tracking-[0.25em] px-4"
             style={{ fontFamily: "var(--font-body)" }}>
             HERITAGE DROPPED IN MODERN STYLE
           </p>
-          <div className="w-4 h-px bg-black/60 mx-auto mt-2"></div>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10">

@@ -8,13 +8,18 @@ export default function AboutUs() {
           {/* Text Content */}
           <div className="space-y-8">
             <div>
-              <h2 
-                className="text-3xl md:text-4xl lg:text-5xl font-light tracking-[0.3em] text-black mb-6"
-                style={{ fontFamily: "var(--font-heading)" }}
-              >
-                OUR STORY
-              </h2>
-              <div className="w-16 h-px bg-black mb-8"></div>
+              {/* Section Header with Full Width Separator */}
+              <div className="text-left mb-8">
+                <div className="flex items-center mb-4">
+                  <h2 
+                    className="text-3xl md:text-4xl lg:text-5xl font-light tracking-[0.3em] text-black mr-6"
+                    style={{ fontFamily: "var(--font-heading)" }}
+                  >
+                    OUR STORY
+                  </h2>
+                  <div className="flex-1 h-px bg-gray-300"></div>
+                </div>
+              </div>
             </div>
             
             <div className="space-y-6">

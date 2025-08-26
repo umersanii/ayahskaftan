@@ -63,7 +63,7 @@ export default function Header() {
 
             <div className="flex-1 flex justify-center">
               <Link href="/" className="hover:opacity-80 transition-opacity">
-                <h1 className="font-serif text-lg sm:text-xl md:text-2xl lg:text-3xl font-light tracking-[0.2em] sm:tracking-[0.25em] md:tracking-[0.3em] text-white">
+                <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light tracking-[0.2em] sm:tracking-[0.25em] md:tracking-[0.3em] text-white" style={{ fontFamily: "Playfair Display, serif" }}>
                   AYAHS KAFTAN
                 </h1>
               </Link>
@@ -108,7 +108,7 @@ export default function Header() {
           <div className="fixed left-0 top-0 h-full w-80 bg-black shadow-xl">
             <div className="p-6 border-b border-gray-700">
               <div className="flex items-center justify-between">
-                <h2 className="font-serif text-lg text-white tracking-wider">
+                <h2 className="text-lg text-white tracking-wider" style={{ fontFamily: "Playfair Display, serif" }}>
                   MENU
                 </h2>
                 <Button

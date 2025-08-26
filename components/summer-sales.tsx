@@ -78,23 +78,21 @@ export default function SummerSales() {
         
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-4 lg:mb-6">
-            <div className="w-6 lg:w-8 h-px bg-gradient-to-r from-transparent to-black"></div>
-            <Crown className="h-5 lg:h-6 w-5 lg:w-6 mx-3 lg:mx-4 text-black" />
-            <div className="w-6 lg:w-8 h-px bg-gradient-to-l from-transparent to-black"></div>
+            <div className="flex-1 h-px bg-gray-300"></div>
+            <h2
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-[0.15em] sm:tracking-[0.2em] text-black mx-6 sm:mx-8 md:mx-12"
+              style={{ fontFamily: "var(--font-heading)" }}
+            >
+              UP TO 50% OFF
+            </h2>
+            <div className="flex-1 h-px bg-gray-300"></div>
           </div>
-          <h2
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-thin tracking-[0.15em] sm:tracking-[0.2em] text-black mb-4"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            UP TO 50% OFF
-          </h2>
           <p 
             className="text-xs sm:text-sm text-gray-600 tracking-[0.3em] sm:tracking-[0.25em] px-4"
             style={{ fontFamily: "var(--font-body)" }}
           >
             SUMMER SALE
           </p>
-          <div className="w-4 h-px bg-black mx-auto mt-2"></div>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10">

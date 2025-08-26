@@ -44,17 +44,22 @@ export default function CollectionsShowcase() {
   <section className="py-12 lg:py-16 bg-gradient-to-b from-gray-100 to-gray-200">
       <div className="w-full mx-auto px-8 md:px-12 lg:px-16 xl:px-20">
         <div className="text-center mb-16">
-          <h2
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-thin tracking-[0.15em] sm:tracking-[0.2em] text-black mb-4"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            COLLECTIONS
-          </h2>
-          <p className="text-xs sm:text-sm text-gray-800 tracking-[0.3em] sm:tracking-[0.25em] px-4"
+          {/* Heading with full width separators */}
+          <div className="flex items-center justify-center mb-4">
+            <div className="flex-1 h-px bg-gray-300"></div>
+            <h2
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-[0.15em] sm:tracking-[0.2em] text-black mx-6 sm:mx-8 md:mx-12"
+              style={{ fontFamily: "var(--font-heading)" }}
+            >
+              COLLECTIONS
+            </h2>
+            <div className="flex-1 h-px bg-gray-300"></div>
+          </div>
+          {/* Description below */}
+          <p className="text-xs sm:text-sm text-gray-600 tracking-[0.2em] sm:tracking-[0.25em] px-4 mt-6"
             style={{ fontFamily: "var(--font-body)" }}>
             DISCOVER OUR CURATED CATEGORIES
           </p>
-          <div className="w-4 h-px bg-black/60 mx-auto mt-2"></div>
         </div>
         {/* Desktop Grid */}
         <div className="hidden lg:grid grid-cols-4 gap-6 md:gap-8 lg:gap-10">

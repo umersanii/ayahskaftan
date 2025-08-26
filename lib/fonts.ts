@@ -1,4 +1,5 @@
-import { Playfair_Display, Inter, Jost } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google";
+import localFont from "next/font/local";
 
 // Current Active Fonts
 export const playfair = Playfair_Display({
@@ -13,10 +14,83 @@ export const inter = Inter({
     variable: "--font-inter",
 });
 
-export const jost = Jost({
-    subsets: ["latin"],
-    display: "swap",
+// Local Jost Font Configuration
+export const jost = localFont({
+    src: [
+        {
+            path: "../public/fonts/Jost-Thin.ttf",
+            weight: "100",
+            style: "normal",
+        },
+        {
+            path: "../public/fonts/Jost-ExtraLight.ttf",
+            weight: "200",
+            style: "normal",
+        },
+        {
+            path: "../public/fonts/Jost-Light.ttf",
+            weight: "300",
+            style: "normal",
+        },
+        {
+            path: "../public/fonts/Jost-Regular.ttf",
+            weight: "400",
+            style: "normal",
+        },
+        {
+            path: "../public/fonts/Jost-Medium.ttf",
+            weight: "500",
+            style: "normal",
+        },
+        {
+            path: "../public/fonts/Jost-SemiBold.ttf",
+            weight: "600",
+            style: "normal",
+        },
+        {
+            path: "../public/fonts/Jost-Bold.ttf",
+            weight: "700",
+            style: "normal",
+        },
+        {
+            path: "../public/fonts/Jost-ExtraBold.ttf",
+            weight: "800",
+            style: "normal",
+        },
+        {
+            path: "../public/fonts/Jost-Black.ttf",
+            weight: "900",
+            style: "normal",
+        },
+        // Italic variants
+        {
+            path: "../public/fonts/Jost-LightItalic.ttf",
+            weight: "300",
+            style: "italic",
+        },
+        {
+            path: "../public/fonts/Jost-Italic.ttf",
+            weight: "400",
+            style: "italic",
+        },
+        {
+            path: "../public/fonts/Jost-MediumItalic.ttf",
+            weight: "500",
+            style: "italic",
+        },
+        {
+            path: "../public/fonts/Jost-SemiBoldItalic.ttf",
+            weight: "600",
+            style: "italic",
+        },
+        {
+            path: "../public/fonts/Jost-BoldItalic.ttf",
+            weight: "700",
+            style: "italic",
+        },
+    ],
     variable: "--font-jost",
+    display: "swap",
 });
 
 // Alternative Font Options (uncomment to use)
@@ -40,22 +114,22 @@ export const jost = Jost({
 //   weight: ["400", "600", "700"],
 // });
 
-// Font Configuration Object
+// Font Configuration Object - Updated to use Jost for everything
 export const fontConfig = {
-    primary: playfair,
+    primary: jost,
     secondary: jost,
-    heading: playfair,
+    heading: jost,
     body: jost,
-    display: playfair,
+    display: jost,
 };
 
-// CSS Variable Names
+// CSS Variable Names - Updated to use Jost variables
 export const fontVariables = {
-    primary: "--font-playfair",
+    primary: "--font-jost",
     secondary: "--font-jost", 
-    heading: "--font-playfair",
+    heading: "--font-jost",
     body: "--font-jost",
-    display: "--font-playfair",
+    display: "--font-jost",
 };
 
 // To change fonts system-wide:
