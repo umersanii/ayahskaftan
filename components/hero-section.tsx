@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden white">
+    <section className="relative min-h-screen w-full overflow-hidden white bg-gradient-to-b from-white to-gray-100">
       {/* Desktop Layout */}
       <div className="hidden md:flex h-screen">
         {/* Left Content Area - 55% */}

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { Crown } from "lucide-react";
 
 export default function SummerSales() {
   const saleProducts = [
@@ -72,29 +73,35 @@ export default function SummerSales() {
   ];
 
   return (
-  <section className="py-24 bg-gradient-to-b white">
+  <section className="py-12 lg:py-12 bg-gradient-to-b from-gray-200 to-gray-100">
       <div className="w-full mx-auto px-8 md:px-12 lg:px-16 xl:px-20">
-  <div className="text-center mb-16 bg-black py-8 rounded-xl">
-            <h2
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-thin tracking-[0.15em] sm:tracking-[0.2em] text-white mb-4"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              UP TO 50% OFF
-            </h2>
+        
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center mb-4 lg:mb-6">
+            <div className="w-6 lg:w-8 h-px bg-gradient-to-r from-transparent to-black"></div>
+            <Crown className="h-5 lg:h-6 w-5 lg:w-6 mx-3 lg:mx-4 text-black" />
+            <div className="w-6 lg:w-8 h-px bg-gradient-to-l from-transparent to-black"></div>
+          </div>
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-thin tracking-[0.15em] sm:tracking-[0.2em] text-black mb-4"
+            style={{ fontFamily: "var(--font-heading)" }}
+          >
+            UP TO 50% OFF
+          </h2>
           <p 
-            className="text-xs sm:text-sm text-gray-200 tracking-[0.3em] sm:tracking-[0.25em] px-4"
+            className="text-xs sm:text-sm text-gray-600 tracking-[0.3em] sm:tracking-[0.25em] px-4"
             style={{ fontFamily: "var(--font-body)" }}
           >
             SUMMER SALE
           </p>
-          <div className="w-4 h-px bg-white/60 mx-auto mt-2"></div>
+          <div className="w-4 h-px bg-black mx-auto mt-2"></div>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10">
           {saleProducts.map((product) => (
             <div key={product.id} className="group cursor-pointer">
               <div className="relative overflow-hidden mb-6 aspect-[9/15] bg-white shadow-sm">
-                <div className="absolute top-4 left-4 z-10 bg-red-500 text-white text-sm font-medium px-3 py-2 rounded tracking-[0.15em]">
+                <div className="absolute top-2 left-2 sm:top-4 sm:left-4 z-10 bg-red-500 text-white text-xs sm:text-sm font-medium px-2 py-1 sm:px-3 sm:py-2 rounded tracking-[0.1em] sm:tracking-[0.15em]">
                   SAVE {product.discount}
                 </div>
                 <Image

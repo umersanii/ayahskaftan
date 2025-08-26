@@ -8,6 +8,7 @@ import Jalabayti from "@/components/jalabayti";
 import CuratedForYou from "@/components/curated-for-you";
 import Footer from "@/components/footer";
 import AboutUs from "@/components/about-us";
+import CollectionsShowcase from "@/components/collections-showcase";
 
 
 export default function Home() {
@@ -15,8 +16,9 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       <Header />
       <HeroSection />
+      <CollectionsShowcase />
       <SummerSales />
-      <CuratedForYou />
+      {/* <CuratedForYou /> */}
       <AyahsKaftan />
       <Ldress />
       <Perlage />

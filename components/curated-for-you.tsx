@@ -73,15 +73,11 @@ export default function CuratedForYou() {
   const bottomProducts = curatedProducts.slice(3); // Last 2 for bottom
 
   return (
-    <section className="py-12 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50">
+    <section className="py-12 lg:py-16 bg-gradient-to-b from-gray-100 to-white-100">
       <div className="max-w-[1800px] mx-auto px-3 lg:px-4 xl:px-6">
         {/* Section Header */}
   <div className="text-center mb-12 lg:mb-20 bg-black py-8 rounded-xl">
-          <div className="flex items-center justify-center mb-4 lg:mb-6">
-            <div className="w-6 lg:w-8 h-px bg-gradient-to-r from-transparent to-white/60"></div>
-            <Crown className="h-5 lg:h-6 w-5 lg:w-6 mx-3 lg:mx-4 text-white" />
-            <div className="w-6 lg:w-8 h-px bg-gradient-to-l from-transparent to-white/60"></div>
-          </div>
+
           <h2
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light tracking-[0.2em] lg:tracking-[0.3em] text-white mb-4 lg:mb-6"
             style={{ fontFamily: "var(--font-heading)" }}

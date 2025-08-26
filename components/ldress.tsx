@@ -38,16 +38,16 @@ export default function LigneeOr() {
   ];
 
   return (
-  <section className="py-24 bg-gradient-to-b white">
+  <section className="py-24 bg-gradient-to-b from-gray-100 to-gray-200">
 
 
       <div className="w-full mx-auto px-8 md:px-12 lg:px-16 xl:px-20">
   <div className="text-center mb-16 bg-black py-8 rounded-xl">
             <h2
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-thin tracking-[0.15em] sm:tracking-[0.2em] text-white mb-4"
-            style={{ fontFamily: "var(--font-heading)" }}
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-thin tracking-[0.15em] sm:tracking-[0.2em] text-white mb-4"
+              style={{ fontFamily: "TAN Mon Cheri Regular" }}
             >
-            L&apos;DRESS
+              L&apos;DRESS
             </h2>
           <p className="text-xs sm:text-sm text-gray-200 tracking-[0.3em] sm:tracking-[0.25em] px-4"
             style={{ fontFamily: "var(--font-body)" }}>

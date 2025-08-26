@@ -36,22 +36,22 @@ export default function Lumara() {
   ];
 
   return (
-  <section className="py-24 bg-gradient-to-b white">
+  <section className="py-24 bg-gradient-to-b from-gray-200 to-gray-100">
 
 
       <div className="w-full mx-auto px-8 md:px-12 lg:px-16 xl:px-20">
-  <div className="text-center mb-16 bg-black py-8 rounded-xl">
+  <div className="text-center mb-16">
             <h2
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-thin tracking-[0.15em] sm:tracking-[0.2em] text-white mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-thin tracking-[0.15em] sm:tracking-[0.2em] text-black mb-4"
             style={{ fontFamily: "var(--font-heading)" }}
             >
             PERLAGE
             </h2>
-          <p className="text-xs sm:text-sm text-gray-200 tracking-[0.3em] sm:tracking-[0.25em] px-4"
+          <p className="text-xs sm:text-sm text-gray-600 tracking-[0.3em] sm:tracking-[0.25em] px-4"
             style={{ fontFamily: "var(--font-body)" }}>
             SUBTLE SPARKLE, LASTING CHARM
           </p>
-          <div className="w-4 h-px bg-white/60 mx-auto mt-2"></div>
+          <div className="w-4 h-px bg-black/60 mx-auto mt-2"></div>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10">
