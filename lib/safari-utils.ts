@@ -71,7 +71,10 @@ export const optimizeScrollForSafari = (): void => {
   if (typeof document === 'undefined' || !isSafari()) return;
   
   // Add momentum scrolling for iOS Safari
-  document.body.style.webkitOverflowScrolling = 'touch';
+  const bodyStyle = document.body.style as CSSStyleDeclaration & {
+    webkitOverflowScrolling?: string;
+  };
+  bodyStyle.webkitOverflowScrolling = 'touch';
 };
 
 // Safari-specific CSS classes
@@ -105,7 +108,8 @@ export const initSafariOptimizations = (): void => {
   }
 };
 
-export default {
+// Export utilities as named exports
+const safariUtils = {
   isSafari,
   isIOSSafari,
   optimizeVideoForSafari,
@@ -114,3 +118,5 @@ export default {
   getSafariClasses,
   initSafariOptimizations,
 };
+
+export default safariUtils;
